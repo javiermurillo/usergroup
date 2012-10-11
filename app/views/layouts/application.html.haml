@@ -33,7 +33,9 @@
       %section.ruby_tij_network_sites
         .github.widget=   link_to image_tag('github_logo.png'), '//github.com/rubytij'
         .reddit.widget=   link_to image_tag('reddit_logo.png'), '//reddit.com/r/rubytij'
-        .twitter.widget=  link_to image_tag('twitter_logo.png'), '//twitter.com/rubytij'
+        .twitter.widget  
+          =render :partial => "layouts/twitter_widget"
+          =link_to image_tag('twitter_logo.png'), '//twitter.com/rubytij'
       %footer
         %p
           - deed = "http://creativecommons.org/licenses/by-sa/3.0/deed.#{ I18n.locale }"
